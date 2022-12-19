@@ -11,7 +11,8 @@
     backdrop-blur-shadow-lg
     rounded-3xl
     w-11/12
-    max-w-lg
+    max-w-md
+    lg:w-[470px]
     self-center
     "
     >

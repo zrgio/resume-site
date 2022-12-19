@@ -15,26 +15,28 @@
     bg-opacity-40
     backdrop-blur-md
     rounded-drop-shadow-lg
-    self-center
     rounded-3xl
+    self-center
     flex
     flex-col
     items-center
     h-3/4
+    lg:h-[512px]
     max-h-128
-    lg:h-3/4
+    min-h-[450px]
     w-11/12
+    min-w-[320px]
     max-w-xs"
     >
 
     <div class="pt-10"/>
 
-    <img class="rounded-full w-20 lg:w-32 h-20 lg:h-32 order-1" src={picture} alt={name}/>
+    <img class="rounded-full w-20 h-20 lg:w-28 lg:h-28 order-1" src={picture} alt={name}/>
 
     <p class="text-3xl order-2 pt-4 font-raleway font-extrabold">{name}</p>
     <p class="text-2xl order-3 font-raleway font-bold">{title}</p>
 
-    <div id="links-icons" class="flex flex-col order-4 pt-2.5">
+    <div id="links-icons" class="flex flex-col order-4 pt-2.5 lg:pt-5">
 
         <div class="py-2">
             <a aria-label="Email" href="mailto:{email}" class="bg-black bg-opacity-10 px-2.5 rounded-xl flex py-2">

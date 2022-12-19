@@ -5,7 +5,7 @@ import {
 publish(
     'build', // path to public directory
     {
-        branch: 'publish',
+        branch: 'gh-pages',
         repo: 'https://github.com/zrgio/resume-site.git',
         user: {
             name: 'Sergio',

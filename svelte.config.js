@@ -20,9 +20,8 @@ const config = {
 			fallback: null,
 			strict: true
 		}),
-		paths: {
-			base: "/resume-site"
-		},
+
+		appDir: 'internal',
 	},
 };
 
