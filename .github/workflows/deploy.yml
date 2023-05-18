@@ -23,7 +23,7 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/resume-site'
-          run: npm run build          
+        run: npm run build          
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
