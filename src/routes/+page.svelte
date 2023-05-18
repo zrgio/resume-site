@@ -13,7 +13,7 @@
 		<FrostedCard
 			name={"Sergio Ulloa"}
 			title={"Developer"}
-			email={"sergio@sulloa.com"}
+			email={"sergioulloa@protonmail.com"}
 			github={"zrgio"}
 			linkedin={"zrgio"}
 			resume={"https://raw.githubusercontent.com/zrgio/cv/main/sergio_ulloa_en.pdf"}
