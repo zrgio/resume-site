@@ -1,0 +1,53 @@
+name: Deploy site to GH pages
+
+on:
+  push:
+    branches: 'main'
+
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: build
+        env:
+          BASE_PATH: '/resume-site'
+        run: |
+          npm run build
+
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'build/'
+
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          cname: www.sulloa.com
